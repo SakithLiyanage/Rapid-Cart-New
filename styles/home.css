@@ -36,7 +36,6 @@ nav ul img {
     margin: 10px;
 }
 
-
 nav ul form.search-form input[type=text] {
     padding: 10px;
     font-size: 17px;
@@ -81,18 +80,34 @@ form.search-form::after {
 }
 
 /* Hero Content */
-.hero-container {
-    
-}
-
 .hero-img {
     width: 100%;
 }
 
 .hero-content {
-    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(0%, -20%);
+}
+
+.hero-content {
+    max-width: 500px;
     margin: auto;
-    line-height: 30px;
+    text-align: justify;
+}
+
+.hero-content h2 {
+    font-size: 48px;
+    font-weight: bold;
+    color: #333;
+}
+
+.hero-content p {
+    margin: 20px 0;
+    font-size: 18px;
+    line-height: 1.6;
+    color: #666;
 }
 
 .primary {
@@ -101,6 +116,7 @@ form.search-form::after {
     border-radius: 10px;
     border: 0;
     width: 150px;
+    cursor: pointer;
 }
 
 .secondary {
@@ -109,6 +125,13 @@ form.search-form::after {
     border-radius: 10px;
     border: 0;
     width: 150px;
+    cursor: pointer;
+}
+
+.primary:hover,
+.secondary:hover{
+    background-color: black;
+    color: white;
 }
 
 /* Category */
@@ -139,7 +162,7 @@ form.search-form::after {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    gap: 20px; 
+    gap: 20px;
 }
 
 .cate-box {
@@ -157,6 +180,187 @@ form.search-form::after {
 .cate-box i {
     font-size: 50px;
 }
-.cate-box:hover{
+
+.cate-box:hover {
     background-color: #FB7429;
 }
+
+/* Products */
+.product-area {
+    margin-left: 50px;
+}
+
+.product-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.product-box {
+    flex: 1 1 calc(25% - 20px); /* 25% width - 20px gap */
+    max-width: calc(25% - 20px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    border: 2px solid #D9D9D9;
+    border-radius: 5px;
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.product-box img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+}
+
+.product-box h3 {
+    margin: 15px 0;
+    font-size: 18px;
+}
+
+.product-box .price {
+    color: #FB7429;
+    font-weight: bold;
+}
+
+.product-box .rating {
+    margin: 10px 0;
+    color: #ffbb00;
+}
+
+.product-actions{
+    gap :10px;
+}
+
+.product-box .product-actions {
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.product-box .product-actions button {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.product-box .product-actions .add-to-cart {
+    background-color: #FB7429;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+}
+.product-actions .add-to-cart:hover{
+    background-color: black;
+    color: white;
+}
+
+.product-box .product-actions .wishlist,
+.product-box .product-actions .view {
+    font-size: 18px;
+    color: #333;
+}
+
+.product-box .product-actions .wishlist:hover,
+.product-box .product-actions .view:hover {
+    color: #FB7429;
+}
+
+.view-all {
+    margin-top: 30px;
+    background-color: #FB7429;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.view-all:hover{
+    background-color: black;
+    color: white;
+}
+
+/* Benefits section */
+.benefits-container {
+    display: flex;
+    justify-content: center;
+    margin: 50px 0;
+    padding: 20px 0;
+    background-color: #f9f9f9;
+}
+
+.benefit {
+    text-align: center;
+    max-width: 300px;
+    flex: 1;
+    margin: 0 20px;
+}
+
+.benefit img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 20px;
+}
+
+.benefit h3 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.benefit p {
+    font-size: 14px;
+    color: #666;
+}
+
+/*-----Footer styles----*/
+footer {
+    background-color: #000000;
+    border-top: 5px solid #FB7429;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    color: #ffffff;
+    justify-content: center;
+
+}
+.footer1 i{
+    color: #D9D9D9;
+    letter-spacing: 19px;
+}
+.footer1 i:hover{
+    color: #FB7429;
+    
+}
+.footer1,
+.footer2,
+.footer3 {
+    padding: 50px 50px 50px 50px;
+    width: 35%;
+}
+.footer1 ul{
+    margin-left:0px;
+}
+.footer2 p a {
+    text-decoration: none;
+    color: #aeaeae;
+}
+
+.footer2 p a:hover {
+    color: #FB7429;
+}
+
+.copyright {
+    background-color: #FB7429;
+    color: #fff;
+    text-align: center;
+    padding: 10px 10px 10px 10px;
+    margin: 0px 0px 0px 0px;
+}
+
